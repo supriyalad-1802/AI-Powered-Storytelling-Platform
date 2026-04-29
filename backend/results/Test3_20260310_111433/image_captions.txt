@@ -1,0 +1,4 @@
+=== IMAGE CAPTIONS (BLIP + Cricket Domain Conditioning) ===
+
+Image 1 (test2.jpeg):
+  The indian team with their trophy

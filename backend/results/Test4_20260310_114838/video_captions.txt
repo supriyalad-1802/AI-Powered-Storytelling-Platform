@@ -1,0 +1,16 @@
+=== VIDEO FRAME CAPTIONS ===
+(BLIP unconditional + cricket context mapping)
+
+[00:00] Crowd cheering in the stadium stands
+[00:05] Cricketers on the cricket ground
+[00:10] Cricket player on the field
+[00:15] Cricketer visible on the field
+[00:20] Cricketers on the cricket ground
+[00:25] Players embracing in celebration on the field
+[00:30] Players embracing in celebration on the field
+[00:35] Cricketers on the cricket ground
+[00:00] Cricket scene: A black and white photo of the moon in the sky.
+[00:03] Cricket stadium during the match
+[00:06] Cricket player on the field
+[00:09] Cricket stadium during the match
+[00:12] Crowd cheering in the stadium stands

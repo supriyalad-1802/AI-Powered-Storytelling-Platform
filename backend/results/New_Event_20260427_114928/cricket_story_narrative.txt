@@ -1,0 +1,7 @@
+=== CRICKET MATCH STORY ===
+Event: New Event
+Generated: 20260427_114928
+Files: ipl_match_MI_vs_CSK.txt
+
+**THRILLING FINISH AT WANKHEDE STADIUM**
+Mumbai Indians take on Chennai Super Kings... in a nail-biting clash! Rohit Sharma leads the charge with 72 off 48 balls! Suryakumar Yadav smashes 55 off 31 balls. Hardik Pandya's 34* off 18 balls seals the deal. CSK reply with 180/7, Rachin Ravindra scoring 61 off 40 balls. Bumrah traps Ruturaj Gaikwad lbw for a golden duck! Mumbai Indians win by 7 runs! Rohit Sharma is Player of the Match!

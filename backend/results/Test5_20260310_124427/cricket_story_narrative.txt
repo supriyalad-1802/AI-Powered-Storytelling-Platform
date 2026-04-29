@@ -1,0 +1,8 @@
+=== CRICKET MATCH STORY ===
+Event: Test5
+Generated: 20260310_124427
+Files: test1.mp4, test2.jpeg, test3.mp4, test4.txt
+
+India beat New Zealand by 96 runs in the 2026 T20 World Cup final. It is the largest margin of victory in a T20 final ever. India posted 255 for 5, the highest total ever in a final.
+
+New Zealand were bowled out for 159 in 19 overs. Jasprit Bumrah took four wickets for 15 runs. Abhishek Sharma scored 52 runs off 21 balls.

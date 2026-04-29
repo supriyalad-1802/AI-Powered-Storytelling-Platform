@@ -1,0 +1,37 @@
+{
+  "event_name": "Test1",
+  "timestamp": "20260309_215407",
+  "domain_detection": {
+    "domain": "CRICKET",
+    "supported": true,
+    "message": "Cricket domain detected with LOW confidence. Keywords matched: t20, world cup.",
+    "sports_result": {
+      "is_sports": true,
+      "sports_score": 3,
+      "matched_keywords": [
+        "team",
+        "win",
+        "crowd"
+      ]
+    },
+    "cricket_result": {
+      "is_cricket": true,
+      "cricket_score": 2,
+      "matched_keywords": [
+        "t20",
+        "world cup"
+      ],
+      "confidence": "LOW"
+    }
+  },
+  "entities": {
+    "players": [],
+    "teams": [
+      "India"
+    ]
+  },
+  "files_processed": [
+    "test1.mp4",
+    "test2.jpeg"
+  ]
+}

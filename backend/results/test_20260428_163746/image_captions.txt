@@ -1,0 +1,5 @@
+[test1.png] Cricket scene: The screen of a website with an image on it.
+[test2.png] Cricket scene: A screenshot of the top 10 highest paid jobs in india.
+[test3.png] Cricket scene: A screenshot of the team profile.
+[test4.png] Cricket scene: A screenshot of the dashboard showing different types and sizes.
+[test5.png] Cricket scene: A screenshot of the game ' s score.

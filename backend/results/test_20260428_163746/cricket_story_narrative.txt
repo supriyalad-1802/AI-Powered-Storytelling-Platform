@@ -1,0 +1,11 @@
+=== CRICKET MATCH STORY ===
+Event: test
+Generated: 20260428_163746
+
+CRICKET THRILLER UNFOLDS AT WANKHEDE STADIUM
+The atmosphere was electric... as the Mumbai Indians took on the Kolkata Knight Riders at the iconic Wankhede Stadium in Mumbai... the crowd was on the edge of their seats... waiting for the action to unfold. The Kolkata Knight Riders, led by Ajinkya Rahane, set the tone with a competitive total of 220/4 in their 20 overs... with notable contributions from Rahane, Finn Allen, and Rinku Singh. 
+
+<prosody rate="-10%">The Mumbai Indians, in pursuit of the target, started cautiously... with Ryan Rickelton and Rohit Sharma laying the foundation... but it was Surya Kumar Yadav who changed the momentum of the game... with some brilliant strokeplay.</prosody> The pressure was building... as the Mumbai Indians edged closer to the target... with Hardik Pandya and Naman Dhir guiding the team to a thrilling victory. 
+
+<break time="800ms"/>
+And then it happened... the Mumbai Indians crossed the line... winning the match by 6 wickets... <prosody rate="+20%" pitch="+10Hz">the crowd erupted in joy... as the Mumbai Indians celebrated their hard-fought victory.</prosody> The win was a testament to the team's determination and skill... and they will look to carry this momentum forward in their upcoming matches. The Kolkata Knight Riders, on the other hand, will look to regroup and come back stronger... in their next encounter. It was an exhilarating match... with plenty of twists and turns... and the fans were treated to a real spectacle... of cricket at its best. The Mumbai Indians' victory was a result of their team effort... and they will be thrilled to have come out on top... in this thrilling encounter.

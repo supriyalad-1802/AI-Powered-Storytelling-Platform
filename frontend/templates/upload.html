@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cricket Storyteller</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            /* Dark overlay */
+            backdrop-filter: blur(4px);
+            /* Blurry background effect */
+            -webkit-backdrop-filter: blur(4px);
+            z-index: -1;
+        }
+
+        .story-box {
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.85;
+        }
+
+        .story-box::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .story-box::-webkit-scrollbar-thumb {
+            background: #f9a8d4;
+            border-radius: 4px;
+        }
+
+        .highlight-word {
+            transition: background-color 0.1s ease, color 0.1s ease;
+        }
+
+        .cursor::after {
+            content: '|';
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="bg-white/90 backdrop-blur-xl shadow-2xl rounded-2xl p-8 w-full max-w-2xl relative overflow-hidden border border-white/40"
+        id="main-container">
+        <h1 class="text-4xl font-extrabold text-center text-pink-700 mb-1 tracking-tight">🏏 AI Cricket Storyteller</h1>
+        <p class="text-gray-400 text-center mb-7 text-sm">Multimodal Orchestration Pipeline Demo</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul class="mb-5 space-y-2">
+            {% for category, message in messages %}
+            <li class="p-3 rounded-xl text-sm font-medium
+                    {% if category == 'success' %} bg-green-50 text-green-700 border border-green-200
+                    {% elif category == 'error' %}   bg-red-50   text-red-700   border border-red-200
+                    {% else %}                        bg-blue-50  text-blue-700  border border-blue-200 {% endif %}">
+                {{ message }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form id="upload-form" method="POST" action="/upload" enctype="multipart/form-data" class="space-y-5"
+            onsubmit="showLoading(event)">
+            <div>
+                <label class="block text-gray-700 font-bold mb-1 text-sm">Match / Event Name</label>
+                <input type="text" id="event-name-input" name="event_name" required placeholder="e.g. IPL_Final_2025"
+                    class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 text-sm" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">Target Audio Length (Mins)</label>
+                    <input type="number" name="duration" min="1" max="10" value="2" required
+                        class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 text-sm bg-white/50">
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-1 text-sm">Language</label>
+                    <select name="language" id="language-select"
+                        class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 text-sm bg-white/50">
+                        <option value="English">English</option>
+                        <option value="Hindi">Hindi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-bold mb-1 text-sm">Director's Instructions (Optional)</label>
+                <textarea name="custom_prompt" rows="2" placeholder="e.g. 'Focus heavily on Bumrah's bowling spell'"
+                    class="w-full p-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-pink-400 text-sm resize-none"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-gray-700 font-bold mb-1 text-sm">Upload Media</label>
+                <input type="file" id="media-upload" name="media" multiple accept="video/*,image/*,audio/*,.txt,.md"
+                    class="w-full p-4 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50 text-sm cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-pink-50 file:text-pink-600 hover:file:bg-pink-100 transition duration-150">
+            </div>
+
+            <div class="flex items-center gap-2 mt-2 pb-2">
+                <input type="checkbox" id="autoplay" name="autoplay" checked
+                    class="w-4 h-4 text-pink-600 border-gray-300 rounded cursor-pointer">
+                <label for="autoplay" class="text-sm text-gray-700 font-medium cursor-pointer">Auto-play audio when
+                    story is ready</label>
+            </div>
+
+            <button type="submit" id="submit-btn"
+                class="w-full bg-pink-600 text-white py-3 rounded-xl font-extrabold text-lg shadow-md hover:bg-pink-700 transition-all">
+                🎙️ Initialize Pipeline
+            </button>
+        </form>
+
+        <div id="inline-loading" class="hidden mt-6 bg-pink-50 rounded-xl p-5 border border-pink-100">
+            <div class="flex flex-col items-center justify-center gap-3">
+                <div class="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-pink-600 mb-2"></div>
+                <span class="font-bold text-pink-700 text-lg">Executing AI Pipeline</span>
+                <span id="dynamic-stage-text" class="text-sm font-medium text-pink-600 animate-pulse mt-1">⏳ Ingesting
+                    Files...</span>
+            </div>
+        </div>
+
+        {% if narrative %}
+        <div class="mt-10 pt-6 border-t border-gray-100" id="results-section">
+            <div class="flex items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-pink-700">📖 Match Story</h3>
+                <div class="flex gap-2">
+                    <button id="skip-btn" onclick="skipTyping()"
+                        class="hidden text-xs bg-gray-800 text-white px-3 py-1 rounded-full hover:bg-gray-900">Fast
+                        Forward ⏭️</button>
+                    <button onclick="downloadPDF()"
+                        class="text-xs bg-gray-100 border border-gray-300 px-3 py-1 rounded-full">📄 PDF</button>
+                </div>
+            </div>
+
+            {% if highlight_video %}
+            <div class="mb-5 rounded-xl overflow-hidden shadow-lg border border-pink-200">
+                <video src="{{ url_for('static', filename=highlight_video) }}" autoplay loop muted playsinline
+                    class="w-full h-auto object-cover"></video>
+            </div>
+            {% endif %}
+
+            <div id="story-text"
+                class="story-box p-5 bg-gradient-to-br from-gray-50 to-pink-50 rounded-xl border border-pink-100 text-gray-800 text-sm cursor">
+            </div>
+
+            <div id="raw-data" class="hidden">{{ narrative }}</div>
+            {% if language %}
+            <input type="hidden" id="rendered-language" value="{{ language }}">
+            {% endif %}
+
+            <div class="mt-5 pt-4 border-t border-pink-100 flex flex-col items-center">
+                <button id="listen-btn" onclick="playStory()" type="button"
+                    class="hidden bg-pink-600 text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:bg-pink-700 transition-all text-sm">
+                    🎧 Synthesize Audio
+                </button>
+                <p id="audio-status" class="hidden text-pink-600 text-sm font-medium mt-3 italic animate-pulse">⏳ Please
+                    wait, your story audio is getting generated...</p>
+                <audio id="audio-player" controls class="hidden w-full mt-4 rounded-lg shadow-sm"></audio>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        let rawText = "";
+        let uiText = "";
+        let typingInterval;
+        let isTyping = false;
+
+        function cleanTextForUI(text) {
+            let cleaned = text.replace(/[*_#]/g, '');
+            cleaned = cleaned.replace(/\[HIGHLIGHT_TIMESTAMP\][\s\S]*/, '');
+            cleaned = cleaned.replace(/<break[^>]*>/g, '... ');
+            cleaned = cleaned.replace(/<[^>]*>/g, '');
+            return cleaned.trim();
+        }
+
+        // --- 1. DYNAMIC INLINE LOADING ---
+        function showLoading(event) {
+            const submitBtn = document.getElementById('submit-btn');
+            const inlineLoading = document.getElementById('inline-loading');
+
+            // Hide the button, show the inline loading box
+            submitBtn.classList.add('hidden');
+            inlineLoading.classList.remove('hidden');
+
+            // Hide the results section if it exists from a previous run
+            const resultsSection = document.getElementById('results-section');
+            if (resultsSection) resultsSection.classList.add('hidden');
+
+            let phases = [
+                "⏳ Analyzing Media...",
+                "⏳ Processing Context...",
+                "⏳ Generating Story (This may take up to a minute)..."
+            ];
+            let phaseIdx = 0;
+            const stageText = document.getElementById('dynamic-stage-text');
+            setInterval(() => {
+                if (phaseIdx < phases.length - 1) phaseIdx++;
+                if (stageText) stageText.innerText = phases[phaseIdx];
+            }, 3000);
+        }
+
+        // --- 2. TYPEWRITER EFFECT & AUTO-PLAY CHECK ---
+        // --- 2. TYPEWRITER EFFECT & AUTO-PLAY CHECK ---
+        window.onload = function () {
+            const rawDataEl = document.getElementById('raw-data');
+            if (rawDataEl) {
+                rawText = rawDataEl.innerText;
+                uiText = cleanTextForUI(rawText);
+                document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+
+                // CHECK AUTO-PLAY PREFERENCE IMMEDIATELY
+                const shouldAutoplay = ("{{ 'true' if autoplay else 'false' }}" === "true");
+
+                if (shouldAutoplay) {
+                    // If checked: Skip typing, show text instantly, and fetch audio right now
+                    document.getElementById('story-text').innerHTML = uiText;
+                    document.getElementById('story-text').classList.remove('cursor');
+                    document.getElementById('skip-btn').classList.add('hidden');
+                    document.getElementById('listen-btn').classList.remove('hidden');
+                    playStory();
+                } else {
+                    // If unchecked: Do the cool typewriter animation
+                    startTyping(uiText);
+                }
+            }
+        };
+
+        function startTyping(text) {
+            const box = document.getElementById('story-text');
+            const skipBtn = document.getElementById('skip-btn');
+
+            box.innerText = "";
+            skipBtn.classList.remove('hidden');
+            isTyping = true;
+
+            let i = 0;
+            typingInterval = setInterval(() => {
+                box.innerHTML += text.charAt(i);
+                i++;
+                if (i >= text.length) finishTyping();
+            }, 15);
+        }
+
+        function finishTyping() {
+            clearInterval(typingInterval);
+            isTyping = false;
+            document.getElementById('story-text').innerHTML = uiText;
+            document.getElementById('story-text').classList.remove('cursor');
+            document.getElementById('skip-btn').classList.add('hidden');
+            document.getElementById('listen-btn').classList.remove('hidden');
+        }
+
+        // --- AUTO-PLAY LOGIC ---
+        // The backend passes the user's choice back into the template
+        const shouldAutoplay = ("{{ 'true' if autoplay else 'false' }}" === "true");
+        if (shouldAutoplay) {
+            playStory();
+        }
+
+        function skipTyping() {
+            if (isTyping) finishTyping();
+        }
+
+        // --- 3. PDF AND AUDIO HIGHLIGHTER ---
+        function downloadPDF() {
+            const eventName = document.getElementById("event-name-input") ? document.getElementById("event-name-input").value : "Match_Report";
+            fetch('/download-pdf', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ narrative: rawText, event_name: eventName })
+            })
+                .then(res => res.blob())
+                .then(blob => {
+                    const link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = "Cricket_Match_Story.pdf";
+                    link.click();
+                });
+        }
+
+        function playStory() {
+            const btn = document.getElementById("listen-btn");
+            const status = document.getElementById("audio-status");
+            const player = document.getElementById("audio-player");
+            const storyBox = document.getElementById("story-text");
+
+            btn.classList.add("hidden");
+            status.classList.remove("hidden");
+
+            const langEl = document.getElementById("rendered-language");
+            const language = langEl ? langEl.value : "English";
+
+            fetch('/listen', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ narrative: rawText, language: language })
+            })
+                .then(res => {
+                    if (!res.ok) throw new Error("Audio Failed");
+                    return res.blob();
+                })
+                .then(blob => {
+                    player.src = URL.createObjectURL(blob);
+                    status.classList.add("hidden");
+                    player.classList.remove("hidden");
+                    setupAccurateHighlighter(storyBox, uiText, player);
+                    player.play();
+                })
+                .catch(err => {
+                    status.innerText = "❌ TTS Synthesizer Error.";
+                    status.classList.replace("text-pink-600", "text-red-600");
+                });
+        }
+
+        function setupAccurateHighlighter(box, text, player) {
+            const words = text.split(/(\s+)/);
+            let html = "";
+            let wordCount = 0; let charCount = 0;
+            const wordMap = [];
+
+            words.forEach(w => {
+                if (w.trim() === "") {
+                    html += w;
+                    charCount += w.length;
+                } else {
+                    const startChar = charCount;
+                    const endChar = charCount + w.length;
+                    html += `<span id="word-${wordCount}" class="highlight-word rounded px-[2px] transition-colors duration-100">${w}</span>`;
+                    wordMap.push({ id: `word-${wordCount}`, start: startChar, end: endChar });
+                    wordCount++; charCount += w.length;
+                }
+            });
+            box.innerHTML = html;
+
+            player.addEventListener("timeupdate", () => {
+                if (!player.duration) return;
+
+                // Hack to fix lag: remove edge-tts trailing silence and apply a slight math curve
+                const adjustedDuration = Math.max(0.1, player.duration - 0.5);
+                let progress = player.currentTime / adjustedDuration;
+                progress = Math.min(1, Math.pow(progress, 1.05)); // Curve to reduce lag
+
+                const targetChar = Math.floor(progress * charCount);
+                for (let i = 0; i < wordMap.length; i++) {
+                    const span = document.getElementById(wordMap[i].id);
+                    if (!span) continue;
+                    if (targetChar >= wordMap[i].start && targetChar <= wordMap[i].end) {
+                        span.classList.add("bg-pink-300", "text-black", "font-bold");
+                    } else {
+                        span.classList.remove("bg-pink-300", "text-black", "font-bold");
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

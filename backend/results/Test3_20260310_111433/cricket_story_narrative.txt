@@ -1,0 +1,6 @@
+=== CRICKET MATCH STORY ===
+Event: Test3
+Generated: 20260310_111433
+Files processed: test1.mp4, test2.jpeg
+
+Write a cricket match story using ONLY the following information. Do not add any facts, scores, or names not mentioned below. Write in a narrative sports commentary style: grotesquely or grotesquely.

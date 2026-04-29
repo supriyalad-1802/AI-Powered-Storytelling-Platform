@@ -1,0 +1,41 @@
+# Cricket AI Storytelling Platform - Requirements
+# Install with: pip install -r requirements.txt
+
+# Core Framework
+flask>=2.3.0
+werkzeug>=2.3.0
+
+# AI / ML Models
+openai-whisper>=20230918
+transformers>=4.35.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Vision
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Pegasus / BLIP / BART (all via transformers above)
+sentencepiece>=0.1.99        # Required for Pegasus tokenizer
+protobuf>=3.20.0             # Required for sentencepiece
+
+# Audio processing (Whisper dependency)
+ffmpeg-python>=0.2.0
+
+# Utilities
+numpy>=1.24.0
+accelerate>=0.24.0           # Optional: faster HuggingFace model loading
+
+# TTS (Module 5 - optional for audio narration output)
+gTTS>=2.3.2                  # Prototype TTS
+
+# Note: ffmpeg binary must also be installed separately:
+#   Windows: choco install ffmpeg   OR download from https://ffmpeg.org
+#   Linux:   sudo apt install ffmpeg
+#   macOS:   brew install ffmpeg
+
+# New Pipeline Additions
+moviepy>=1.0.3
+edge-tts>=7.0.0
+groq>=0.5.0
+easyocr>=1.7.0

@@ -1,0 +1,4 @@
+=== IMAGE CAPTIONS (BLIP) ===
+
+Image 1 (test2.jpeg):
+  Players celebrating with the championship trophy

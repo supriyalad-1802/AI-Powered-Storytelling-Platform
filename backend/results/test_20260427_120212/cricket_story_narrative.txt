@@ -1,0 +1,12 @@
+=== CRICKET MATCH STORY ===
+Event: test
+Generated: 20260427_120212
+Files: test4.txt
+
+T20 WORLD CUP THRILLER
+The atmosphere was electric at the Narendra Modi Stadium in Ahmedabad as India took on New Zealand in the ICC Men's T20 World Cup 2026 final... the crowd was on the edge of their seats as the Indian batsmen took to the field... Abhishek Sharma and Sanju Samson gave India a blistering start, racing to 92 runs in the powerplay... the joint highest powerplay score in T20 World Cup history! 
+The Indian batsmen were in top form, with Abhishek smashing his fifty in just 18 balls... the quickest half-century of the entire tournament! 
+Samson's 89 was the highest individual score ever in a T20 World Cup final... as India posted a massive total of 255 for 5! 
+New Zealand's chase was strangled from the start by Jasprit Bumrah's brilliant bowling... he took 4 wickets for just 15 runs... the greatest bowling performance in a World Cup final! 
+India won by 96 runs, the largest margin of victory in a T20 World Cup final ever! 
+The crowd erupted in joy as Suryakumar Yadav lifted the T20 World Cup trophy!

@@ -1,0 +1,10 @@
+=== VIDEO FRAME CAPTIONS (BLIP + Cricket Domain Conditioning) ===
+
+[00:00] The team ' s faces
+[00:05] Is seen in the audience at an event
+[00:10] Is caught by the umpire
+[00:15] Is seen in the audience at an event
+[00:20] Players
+[00:25] Two players hugging each other players
+[00:30] Is hugged by two men
+[00:35] Is seen in the crowd as he gets his hands on the ball

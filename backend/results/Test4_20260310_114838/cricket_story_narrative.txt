@@ -1,0 +1,6 @@
+=== CRICKET MATCH STORY ===
+Event: Test4
+Generated: 20260310_114838
+Files: test1.mp4, test2.jpeg, test3.mp4
+
+Summarize the following cricket match information into a flowing sports narrative story. Only use facts explicitly stated below. Do not invent scores, names, or events.

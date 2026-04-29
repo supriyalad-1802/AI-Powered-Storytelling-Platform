@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Base Styles (Ensuring Centering) */
+body {
+    background: #f7f8fa;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container Card Style */
+.container {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Typography */
+h1 { 
+    color: #1f2937; 
+    margin-bottom: 10px; 
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* Form Elements */
+label { 
+    display: block; 
+    margin-top: 15px; 
+    font-weight: 600; 
+    text-align: left;
+    color: #374151;
+    margin-bottom: 5px;
+}
+
+input[type="file"], select {
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 5px;
+    border: 1px solid #d1d5db; 
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    background-color: #f9fafb;
+}
+
+input[type="file"]:focus, select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Button Styling */
+button {
+    width: 100%; 
+    padding: 12px; 
+    margin-top: 30px;
+    background-color: #3b82f6; 
+    color: white;
+    font-weight: 700; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover { 
+    background-color: #2563eb; 
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+/* Flash Messages */
+.flash { 
+    list-style: none; 
+    padding: 0; 
+    margin-bottom: 20px;
+}
+
+.flash li {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.success { 
+    background-color: #d1fae5; 
+    color: #065f46; 
+    border: 1px solid #10b981;
+}
+
+.error { 
+    background-color: #fee2e2; 
+    color: #991b1b; 
+    border: 1px solid #f87171;
+}
+

@@ -1,0 +1,10 @@
+=== CRICKET MATCH STORY ===
+Event: Test5
+Generated: 20260310_125035
+Files: test1.mp4, test2.jpeg, test4.txt
+
+India beat New Zealand by 96 runs in the 2026 T20 World Cup final. India posted 255 for 5, the highest total ever in a final. New Zealand were bowled out for 159 in 19 overs.
+
+Abhishek Sharma hit the fastest fifty of the tournament. James Neesham took 3 wickets for 46 runs. Write a detailed cricket match story in flowing sports commentary style.
+
+Use ONLY the facts stated below.

@@ -1,0 +1,34 @@
+[geolocation.mp4]
+[00:00] Welcome from team TechElytes presenting on the topic Geolocation based attendance tracking mobile application.
+[00:08] We are introducing you to the technology where efficiency meets innovation in attendance management system for employees.
+[00:18] Traditional methods are prone to errors, inefficiencies and time-consuming processes but not anymore with our application.
+[00:28] Introducing the app, Attended, our smart automated attendance tracking application designed to streamline and simplify employee management to improve work efficiency in Employer Tendence Management System.
+[00:43] With Pre-Size Geolocation and Real-Time GPS tracking, the application simplifies attendance logging.
+[00:51] Our app do automatic check-ins and check-outs of employees using Geofencing within a 200 meter radius.
+[01:01] When you leave this radius, the app instantly checks you out ensuring every entry and exit is accurately recorded.
+[01:10] For remote work or off-site tasks, Attended offers a manual check-in and check-out feature with easy location confirmation.
+[01:20] The app also calculates total working hours providing a clear view of each employee's work time enhancing productivity insights.
+[01:30] By automating attendance, Attended app helps organizations to save their time, reduce errors and improve overall productivity and efficiency.
+[01:42] In this way, the application is very useful in attendance management. Let's take a close look at the technology used behind the Attended app.
+[01:53] Our frontend is built using Flutter, ensuring for a smooth responsive experience on any of the device.
+[02:02] We used Flutter's Geolocation dependencies to provide precise real-time tracking making attendance effortless and reliable.
+[02:13] On the back end, we have integrated Firebase for official server handling and database enabling for seamless app performance.
+[02:24] With real-time data synchronization, Attended keeps your attendance records up to date and accurate at all of the times.
+[02:37] Security is top priority. Attended ensures top-tier data encryption, firewall protection and JWT authentication to safeguard employees' data in the company.
+[02:50] Experience the future of...
+
+[sample.mp4]
+[00:00] जेयें, पालेच की वा अफिस ला जानार या एक ते मुलीं साटी, हा महत्वाजा संदेशा आई.
+[00:07] जर आपन रस्टेवर जातस्टाना, एक आद मुल रडटाना मतेचाद पत्ता आसे,
+[00:13] असाजर मुल आपने दिस्टो वो आपने लाते विडन्ति करगासे,
+[00:18] तो में पाट्टेवर नेवूं शोडा, तो मैट्वेंनो आपन वेड़िस सावगागा,
+[00:22] ता मुलनाना या पत्टेवर गेवून ना जाता, आपने लाते मुलनाना ताकार पूलि सेशन लागे जाएचाएई,
+[00:28] कर थ, चोरी करने, बलाद कर करने, वो आपनान करने,
+[00:33] तो आईची नविल पट्टट जालि आये,
+[00:35] तर मिट्वानो वो मैट्वेंनो आपने ला विननती आये,
+[00:39] आपने ला बहिनि किवें मैट्वेंनी आस थें,
+[00:42] तर तेंना रहा महदो था संदेश खर्वग गरा,
+[00:45] हासंदेश खर्वग कराया आजी वात लाजून का,
+[00:49] आप लेग चादा मुली लावाचाव सक्तो
+[00:52] मैंट्रेनो आपश अवद्रा सुरक्षिट्रा सतर कराव
+[00:56] जाहिं

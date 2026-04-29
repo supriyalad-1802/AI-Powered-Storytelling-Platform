@@ -1,0 +1,6 @@
+=== CRICKET MATCH STORY ===
+Event: me
+Generated: 20260426_232344
+Files: ipl_match_MI_vs_CSK.txt
+
+Error: LLM generation failed. Please check server logs.

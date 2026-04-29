@@ -1,0 +1,8 @@
+=== CRICKET MATCH STORY ===
+Event: test event
+Generated: 20260428_144809
+
+Wankhede Stadium mein aaj ka match bahut hi rोमांचक raha, <prosody rate="-10%">jahaan Mumbai Indians aur Chennai Super Kings ke beech mein ek bahut hi kathin match hua</prosody>. Chennai Super Kings ne toss jeetkar pehle fielding ka faisla kiya, aur Mumbai Indians ne 20 overs mein 187 runs banaye, 4 wickets khokar. Rohit Sharma ne 72 runs banaye, 6 fours aur 4 sixes lagaye, <prosody rate="+20%" pitch="+10Hz">jismein unhone Jadeja ke do back to back sixes lagaye, jo ki crowd ko apne pairon par khada kar diya</prosody>. Suryakumar Yadav ne 55 runs banaye, 3 fours aur 4 sixes lagaye, aur Hardik Pandya ne 34 runs banaye, 2 fours aur 2 sixes lagaye.
+
+<break time="800ms"/>
+Chennai Super Kings ki batting shurui ho gayi, aur Bumrah ne Ruturaj Gaikwad ko golden duck par lbw kar diya, <prosody rate="+20%" pitch="+10Hz">jo ki CSK ke liye bahut bura signal tha</prosody>. Rachin Ravindra ne 61 runs banaye, lekin MS Dhoni sirf 9 runs banaye, jo ki Hardik Pandya ki yorker par out ho gaye. <prosody rate="-10%">CSK ko antim over mein 22 runs chahiye the, lekin ve sirf 14 runs bana sake</prosody>. Mumbai Indians ne 7 runs se match jeeta, aur Rohit Sharma ko Player of the Match chuna gaya. Bumrah ne 3 wickets liye, 28 runs dekar, 4 overs mein. Wankhede Stadium ki bhid toofani maahol mein thi, <prosody rate="+20%" pitch="+10Hz">jahaan har run par crowd cheer kar rahi thi</prosody>. Ye ek bahut hi rोमांचक match tha, jise dekhkar darshakon ka dil khush ho gaya. [HIGHLIGHT_TIMESTAMP]: 01:45

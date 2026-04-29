@@ -1,0 +1,5 @@
+=== IMAGE CAPTIONS ===
+(BLIP unconditional + cricket context mapping)
+
+Image 1 (test2.jpeg):
+  Players celebrating with the championship trophy

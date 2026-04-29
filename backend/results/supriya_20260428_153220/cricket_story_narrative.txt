@@ -1,0 +1,13 @@
+=== CRICKET MATCH STORY ===
+Event: supriya
+Generated: 20260428_153220
+
+CRICKET THRILLER AT WANKHEDE STADIUM
+The crowd was on the edge of their seats as Mumbai Indians took on Chennai Super Kings in a thrilling encounter at the Wankhede Stadium... the atmosphere was electric, with the sound of drums and cheers filling the air. The match was a nail-biter, with twists and turns that kept everyone guessing... until the very end.
+<prosody rate="-10%"> The Chennai Super Kings won the toss and elected to field, putting the Mumbai Indians in to bat first... this was a crucial decision, one that would have a significant impact on the outcome of the game.</prosody> 
+Rohit Sharma and Suryakumar Yadav were in top form, hitting back to back sixes and fours... <prosody rate="+20%" pitch="+10Hz">Rohit hit two consecutive sixes off Jadeja in the 8th over, bringing the crowd to its feet!</prosody> The Mumbai Indians ended their innings with a total of 187/4 in 20 overs... a competitive score, but one that the Chennai Super Kings would be confident of chasing down.
+<prosody rate="-10%"> The Chennai Super Kings reply was off to a disastrous start, with Ruturaj Gaikwad being trapped lbw by Bumrah for a golden duck... this was a huge blow, and one that would put pressure on the rest of the batting lineup.</prosody> 
+<break time="800ms"/> But Rachin Ravindra was in great form, scoring 61 off 40 balls... <prosody rate="+20%" pitch="+10Hz">and the crowd was on the edge of their seats as he hit a series of boundaries to keep his team in the game!</prosody> However, it wasn't enough, as the Chennai Super Kings fell short by 7 runs... the Mumbai Indians had won a thriller!
+The crowd erupted in cheers as the Mumbai Indians celebrated their victory... <prosody rate="+20%" pitch="+10Hz">Rohit Sharma was named Player of the Match, and Bumrah took 3 wickets for 28 runs in 4 overs!</prosody> It was an incredible match, one that will be remembered for a long time... and the Wankhede Stadium was the perfect venue for this thrilling encounter.
+The stadium was rocking, with the sound of drums and cheers filling the air... the atmosphere was electric, and the players were feeding off the energy of the crowd. The bowlers were running in, trying to get every ounce of speed and swing out of the pitch... and the batsmen were playing some incredible shots, hitting sixes and fours all around the ground. It was a true spectacle, and one that will be remembered for a long time. 
+[HIGHLIGHT_TIMESTAMP]: 01:45

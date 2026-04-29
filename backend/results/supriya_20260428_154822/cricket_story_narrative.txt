@@ -1,0 +1,21 @@
+=== CRICKET MATCH STORY ===
+Event: supriya
+Generated: 20260428_154822
+
+SUPRIYA CRICKET THRILLER UNFOLDS AT WANKHEDE STADIUM
+The stage was set, the crowd was electric, and the players were ready... as the Mumbai Indians took on the Chennai Super Kings in a thrilling encounter at the Wankhede Stadium in Mumbai. 
+<prosody rate="-10%">The tension was palpable as Chennai Super Kings won the toss and elected to field</prosody>, setting the tone for a high-pressure match. 
+<prosody rate="+20%" pitch="+10Hz">The Mumbai Indians got off to a blistering start with Rohit Sharma smashing 72 off 48 balls, including 6 fours and 4 sixes</prosody>, the crowd was on its feet... as the Indians looked to post a competitive total. 
+<prosody rate="-10%">The Chennai Super Kings bowlers were under pressure</prosody>, as Suryakumar Yadav and Hardik Pandya chipped in with vital contributions, taking the Mumbai Indians to 187/4 in 20 overs. 
+The crowd was on the edge of their seats... as the Chennai Super Kings began their reply, but <prosody rate="+20%" pitch="+10Hz">Bumrah struck early, trapping Ruturaj Gaikwad lbw for a golden duck</prosody>. 
+<break time="800ms"/> 
+The Chennai Super Kings fought back, with Rachin Ravindra scoring a valiant 61 off 40 balls, but <prosody rate="+20%" pitch="+10Hz">it was not enough, as the Mumbai Indians restricted them to 180/7 in 20 overs</prosody>. 
+The Mumbai Indians were ecstatic... as they won the match by 7 runs, with Rohit Sharma winning the Player of the Match award. 
+The Wankhede Stadium was abuzz... with excitement, as the players celebrated a thrilling victory. 
+The roar of the crowd still echoes... as the Mumbai Indians celebrated a hard-fought win. 
+And in the end, it was the Mumbai Indians who emerged victorious... in a match that will be remembered for a long time. 
+The final moments of the match were intense... as the Chennai Super Kings fell short of the target. 
+The Mumbai Indians were jubilant... as they took the field to celebrate their win. 
+The crowd was delighted... as the players took a well-deserved victory lap. 
+And the highlight of the match came when... Rohit hit back to back sixes off Jadeja, <prosody rate="+20%" pitch="+10Hz">bringing the crowd to its feet</prosody>. 
+[HIGHLIGHT_TIMESTAMP]: 01:45
