@@ -1,0 +1,6 @@
+=== CRICKET MATCH STORY ===
+Event: final
+Generated: 20260506_174848
+
+CRICKET CHAMPIONSHIP FINAL REACHES CLIMAX
+The crowd is on the edge of their seats... as the players take to the field with determination in their eyes. The atmosphere is electric... with a large crowd cheering in the cricket stadium. <prosody rate="-10%">The tension is building up...</prosody> as the cricketers prepare for the ultimate showdown. The stage is set... for a thrilling encounter. <prosody rate="+20%" pitch="+10Hz">The players are ready to give it their all</prosody>... and the crowd is waiting with bated breath. <break time="800ms"/> The moment of truth has arrived... and the players are ready to face the challenge. The crowd is cheering... and the players are focused. [HIGHLIGHT_TIMESTAMP]: 05:00

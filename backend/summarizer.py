@@ -73,8 +73,7 @@ def generate_story(fused_doc, transcript, video_captions, image_captions,
     script_instruction = "using ONLY the Devanagari script (हिंदी). DO NOT use Romanized Hindi/Hinglish. DO NOT include any English translations." if language == "Hindi" else "DO NOT include any Hindi translations."
     
     video_splicing_rule = ""
-    if video_captions:
-        video_splicing_rule = "HIGHLIGHT SPLICING: Based on the climax of the match, you MUST identify the most exciting moment and output its exact timestamp from the video data at the very end of your response, strictly formatted like this: `[HIGHLIGHT_TIMESTAMP]: MM:SS`\n"
+
 
     system_prompt = (
         f"You are an elite sports television commentator writing a thrilling cricket match feature.\n"

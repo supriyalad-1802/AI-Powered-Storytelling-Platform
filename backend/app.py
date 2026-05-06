@@ -117,7 +117,7 @@ def save_results(event: str, data: dict) -> str:
 @app.route("/")
 def home():
     """Render the main upload page."""
-    return render_template("upload.html", narrative=None, not_enough_msg=None, domain_ok=None, autoplay=False, highlight_video=None)
+    return render_template("index.html", narrative=None, not_enough_msg=None, domain_ok=None, autoplay=False, highlight_video=None)
 
 @app.route("/upload", methods=["POST"])
 def upload():
@@ -249,14 +249,6 @@ def upload():
                 narrative = build_template_narrative(combined_transcript, v_caps, i_caps, t_contents, entities, event)
 
             highlight_video = None
-            if video_filepath and "[HIGHLIGHT_TIMESTAMP]" in narrative:
-                # Extract timestamp and splice video
-                match = re.search(r'\[HIGHLIGHT_TIMESTAMP\]:\s*(\d{2}:\d{2})', narrative)
-                if match:
-                    timestamp = match.group(1)
-                    highlight_video_name = extract_highlight(video_filepath, timestamp, app.static_folder)
-                    if highlight_video_name:
-                        highlight_video = f"results/{highlight_video_name}"
 
             folder = save_results(event, {
                 "transcript": combined_transcript, "ts_transcript": "\n\n".join(stampeds),
@@ -266,7 +258,7 @@ def upload():
             })
 
         return render_template(
-            "upload.html",
+            "index.html",
             narrative=narrative,
             not_enough_msg=None,
             domain_ok=True,
@@ -292,7 +284,7 @@ def listen():
     # 1. Remove markdown symbols
     clean_narrative = re.sub(r'[*_#]', '', narrative)
     
-    # 2. Remove the Highlight Timestamp and anything that comes after it
+    # 2. Remove any leftover Markdown/Highlight text just in case
     clean_narrative = re.sub(r'\[HIGHLIGHT_TIMESTAMP\][\s\S]*', '', clean_narrative)
     
     # 3. Handle SSML tags so they are not read aloud
